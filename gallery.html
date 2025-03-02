@@ -5,19 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #ffe6f0; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
-        img { width: 100px; height: 100px; margin: 5px; border-radius: 5px; object-fit: cover; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #ffe6f0; 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .polaroid {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 150px;
+        }
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 5px;
+        }
+        .caption {
+            margin-top: 8px;
+            font-size: 14px;
+            font-style: italic;
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Our Photo Gallery 📸</h1>
         <div><a href="index.html">Back to Home</a></div>
-        <div>
-            <img src="https://github.com/user-attachments/assets/6898bd55-d30a-4a52-bc92-65d2791789ed" alt="Memory 1">
-            <img src="https://github.com/user-attachments/assets/0c18e063-c43a-4133-a150-a7fcf4562470" alt="Memory 2">
-            <img src="https://github.com/user-attachments/assets/f4813dc8-8697-4971-9cd9-54a13f7cfdfb" alt="Memory 3">
+        <div class="gallery">
+            <div class="polaroid">
+                <img src="your-image1.jpg" alt="Memory 1">
+                <div class="caption">A special moment ❤️</div>
+            </div>
+            <div class="polaroid">
+                <img src="your-image2.jpg" alt="Memory 2">
+                <div class="caption">Laughing together 😆</div>
+            </div>
+            <div class="polaroid">
+                <img src="your-image3.jpg" alt="Memory 3">
+                <div class="caption">Unforgettable trip ✈️</div>
+            </div>
         </div>
     </div>
 </body>
